@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>        
+        <title>Dad Jokes</title>
+        <link href="stylesheets/main.css" rel="stylesheet" type="text/css"> 
+    </head>
+    <body>
+        <div id="jokes">
+          <br>
+          <h1>As a New Dad I need to brush up on my... DAD JOKES!</h1>
+          <br>
+          <form>
+            <input id="bigButton" type="submit" value="DAD JOKE">
+          </form>
+          <h2 id="displayJoke"></h2>
+          <br>
+        </div> 
+        
+    <script>
+      $(document).ready(function() {
+        $("#bigButton").click(function(e) {
+          e.preventDefault();
+          let url = "joke";
+          $.getJSON(url, function(data) {
+              let result = "";
+              result = data.joke;
+              console.log(data);
+              $("#displayJoke").html(result);
+          });
+        });
+        $("searchButton").click(function(e) {
+          e.preventDefault();
+          let url = "/search"+$("#searchField").val();
+          $.getJSON(url, function(data) {
+              var everything;
+              everything = data.results;
+              console.log(data);
+              $("#displaySearch").html(everything);
+          });
+        });
+      });
+    </script>
+    </body>
+</html>

@@ -1,0 +1,51 @@
+h1{
+color:blueviolet;
+font-weight: bold;
+}
+h2{
+    color:green;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #111111;
+}
+body{
+    border-color: chocolate;
+    border-image: url(Cosmere.jpg);
+    background-color: transparent;
+    border-width: thick
+}
+li{
+    float:left;
+}
+li a{
+    display:block;
+    color:black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover{
+    background-color: #dddddd;
+}
+p{
+    font-family: fantasy;
+}
+section{
+    display:flex;
+}
+aside{
+    flex:1;
+}
+article{
+    flex:4;
+}
+
+#jokes {
+  background-color: rgba(255,255,255,.9);
+  border-radius: 25px;
+  margin-right: 25%;
+  margin-left: 25%;
+}
